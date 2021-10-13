@@ -16,8 +16,9 @@ class TextractDemo extends Component {
     capture = () => {
 
         const screenshot = this.webcamRef.current.getScreenshot();
-        this.setState({ screenshot });
-        this.postImage();
+        this.setState({ screenshot }, () => {
+            this.postImage();
+        });
     }
 
     async postImage() {
