@@ -29,7 +29,7 @@ class PollyDemo extends Component {
     async getPollyLanguages() {
         this.setState({ loading: true });
         const backendAPI = process.env.REACT_APP_BACKEND_SERVER + '/demo/polly/languages';
-        const res = await axios.post(backendAPI, formData);        
+        const res = await axios.get(backendAPI);        
         this.setState({ loading: false });
 
         // console.log(res);
