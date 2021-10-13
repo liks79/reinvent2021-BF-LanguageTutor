@@ -27,7 +27,8 @@ class TextractDemo extends Component {
         // console.log(this.state.screenshot);
 
         this.setState({ loading: true });
-        const res = await axios.post('http://192.168.0.70:5000/demo/textract', formData);
+        const backendAPI = process.env.REACT_APP_BACKEND_SERVER + '/demo/textract';
+        const res = await axios.post(backendAPI, formData);
         this.setState({ loading: false });
 
         if (res !== null) {
