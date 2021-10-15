@@ -3,7 +3,7 @@ import PollyDemo from './PollyDemo';
 import RekognitionDemo from './RekognitionDemo';
 import TextractDemo from './TextractDemo';
 import TranscribeDemo from './TranscribeDemo';
-import SumerianDemo from './SumerianDemo';
+import SumerianDemo from "./SumerianDemo";
 
 class DemoComponent extends Component {
   constructor(props) {
@@ -67,7 +67,6 @@ class DemoComponent extends Component {
               return section.tabTitle
             })}
           </ul>
-
           <div>
             { tabContArr[this.state.activeIndex].tabCont }
           </div>
