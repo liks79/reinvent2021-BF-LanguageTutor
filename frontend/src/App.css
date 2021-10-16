@@ -1,42 +1,105 @@
-.App {
-  text-align: center;
+html,
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-color: black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.tab {
+  background-color: rgb(219, 219, 219);
+  padding-bottom: 0px;
+  margin-bottom: -1px;
+  border-width: 1px;
+  border-style: solid;
+  z-index: 2;
+  position: relative;
+  outline: 0px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.current {
+  background-color: white;
+  border-bottom-color: white;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.textEntry {
+  min-width: 305px;
+  min-height: 200px;
+  outline: 0px;
+  padding: 10px;
+  resize: both;
+}
+
+.speechButton {
+  width: 78.75px;
+}
+
+.gestureButton {
+  width: 327px;
+  outline: 0px;
+}
+
+.hidden {
+  display: none;
+}
+
+#renderCanvas {
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+#textToSpeech {
+  padding: 2.5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+#loadScreen {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 100%;
+  height: 100%;
+  background-image: url('assets/images/load_screen.png');
+  background-color: gray;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: contain;
+  z-index: 9999;
 }
 
-.App-link {
-  color: #61dafb;
+#loader {
+  border: 16px solid #3498db38;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+  position: fixed;
 }
 
-@keyframes App-logo-spin {
-  from {
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
     transform: rotate(0deg);
   }
-  to {
+  100% {
     transform: rotate(360deg);
   }
-}
-
-.color-nav {
-  background-color: #131b47;
 }
