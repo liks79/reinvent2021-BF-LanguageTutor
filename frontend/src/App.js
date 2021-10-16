@@ -13,6 +13,15 @@ import {
     Switch,
     Route
 } from "react-router-dom";
+import AWS from 'aws-sdk'
+import awsConfig from './aws-config'
+
+AWS.config.update({
+  region: 'us-west2',
+  credentials: new AWS.CognitoIdentityCredentials({
+    IdentityPoolId: awsConfig.aws_cognito_identity_pool_id
+  })
+})
 
 function App() {
   return (
