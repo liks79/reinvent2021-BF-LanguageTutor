@@ -1,4 +1,7 @@
 import {useState} from "react";
+import AWS from 'aws-sdk'
+import HOST from '../../host.three'
+import 'idempotent-babel-polyfill';
 
 const ControlPannel = () => {
   const [leftTextBoxContent, setLeftTextBoxContent] = useState();
@@ -13,6 +16,17 @@ const ControlPannel = () => {
     ['Luke', undefined],
     ['Alien', undefined],
   ]);
+
+  function main() {
+    const polly = new AWS.Polly();
+    const presigner = new AWS.Polly.Presigner();
+    const speechInit = HOST.aws.TextToSpeechFeature.initializeService(
+      polly,
+      presigner,
+      AWS.VERSION
+    );
+    HOST.HOST.aws
+  }
 
   useState(() => {
     const leftText = `

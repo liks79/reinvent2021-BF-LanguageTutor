@@ -15,6 +15,7 @@ import {
 } from "react-router-dom";
 import AWS from 'aws-sdk'
 import awsConfig from './aws-config'
+import 'idempotent-babel-polyfill';
 
 AWS.config.update({
   region: 'us-west2',
