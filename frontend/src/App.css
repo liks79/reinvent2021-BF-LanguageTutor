@@ -1,3 +1,65 @@
+html,
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border-color: black;
+}
+
+.tab {
+  background-color: rgb(219, 219, 219);
+  padding-bottom: 0px;
+  margin-bottom: -1px;
+  border-width: 1px;
+  border-style: solid;
+  z-index: 2;
+  position: relative;
+  outline: 0px;
+}
+
+.current {
+  background-color: white;
+  border-bottom-color: white;
+  font-weight: bold;
+}
+
+.textEntry {
+  min-width: 305px;
+  min-height: 200px;
+  outline: 0px;
+  padding: 10px;
+  resize: both;
+}
+
+.speechButton {
+  width: 78.75px;
+}
+
+.gestureButton {
+  width: 327px;
+  outline: 0px;
+}
+
+.hidden {
+  display: none;
+}
+
+#renderCanvas {
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+#textToSpeech {
+  padding: 2.5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
 #loadScreen {
   display: flex;
   align-items: center;

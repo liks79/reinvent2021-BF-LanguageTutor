@@ -1,4 +1,5 @@
 import LoadScreen from "./LoadScreen";
+import ControlPannel from "./ControlPannel";
 
 const SumerianDemo = () => {
 
@@ -7,6 +8,7 @@ const SumerianDemo = () => {
   return (
     <div>
       <LoadScreen></LoadScreen>
+      <ControlPannel></ControlPannel>
     </div>
   )
 }
