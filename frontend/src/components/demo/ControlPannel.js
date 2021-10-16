@@ -8,6 +8,12 @@ const ControlPannel = () => {
     console.log(event)
   }
 
+  const renderFn = [];
+  const speakers = new Map([
+    ['Luke', undefined],
+    ['Alien', undefined],
+  ]);
+
   useState(() => {
     const leftText = `
         <speak>
